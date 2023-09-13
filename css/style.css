@@ -11,7 +11,9 @@ body {
 /* header  */
 
 header {
-  width: 1170px;
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 1280px;
   margin: 0 auto 40px;
   padding: 20px 55px;
 }
@@ -36,10 +38,12 @@ section.hero + section {
 .header-nav-list {
   display: flex;
   flex-wrap: wrap;
-  gap: 30px;
+  row-gap: 15px;
+  column-gap: 30px;
   max-width: 990px;
   margin: 0;
   margin-right: 40px;
+  margin-left: 40px;
   padding: 0;
   list-style: none;
 }
@@ -48,6 +52,7 @@ section.hero + section {
   display: flex;
   justify-content: center;
   align-items: center;
+  min-width: 34px;
   width: 34px;
   height: 34px;
   border: 1px solid #00c6bd;
@@ -76,9 +81,15 @@ section.hero + section {
   opacity: 0.3;
 }
 
+.mobile-nav {
+  display: none;
+}
+
 /* section hero */
 main {
-  width: 1170px;
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 1280px;
   margin: 0 auto;
   padding: 0 55px;
 }
@@ -100,15 +111,23 @@ main {
 
 .hero img {
   display: block;
+  width: 100%;
+  height: auto;
+  max-width: 1170px;
 }
 
 /* article offer */
 
 .offer {
-  width: 1030px;
+  width: 100%;
+  max-width: 1030px;
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
+}
+
+.offer-more {
+  display: none;
 }
 
 .offer-1 {
@@ -130,7 +149,8 @@ main {
 }
 
 .offer-content {
-  width: 400px;
+  max-width: 400px;
+  min-width: 200px;
 }
 
 .offer-date {
@@ -157,10 +177,20 @@ main {
   margin-top: 0;
 }
 
+.offer img {
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+}
+
 /* section rent */
 
 .yacht-rent {
   margin-bottom: 120px;
+}
+
+.rent-more {
+  display: none;
 }
 
 .yacht-rent h2 {
@@ -186,7 +216,8 @@ main {
 }
 
 .card {
-  width: 370px;
+  width: 100%;
+  max-width: 370px;
   box-sizing: border-box;
   padding: 30px;
   box-shadow: 0px 4px 30px 0px rgba(22, 49, 82, 0.12);
@@ -195,6 +226,9 @@ main {
 .card-img {
   display: block;
   margin-bottom: 21px;
+  width: 100%;
+  max-width: 310px;
+  height: auto;
 }
 
 .card-title {
@@ -222,6 +256,10 @@ main {
   margin-bottom: 4px;
   font-size: 14px;
   line-height: 19px;
+}
+
+.more-card-info {
+  display: none;
 }
 
 .card-price {
@@ -261,24 +299,39 @@ main {
   align-items: flex-start;
 }
 
-.gallery-wrapper img {
+.gallery-wrapper button {
+  display: none;
+}
+
+.gallery-wrapper .main-image {
   display: block;
   margin-right: 30px;
+  width: 100%;
+  max-width: 970px;
+  height: auto;
+}
+
+.main-image-link:hover {
+  cursor: default;
 }
 
 .gallery-images {
-  width: 170px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  width: 100%;
+  max-width: 170px;
+  height: auto;
   margin: 0;
   padding: 0;
   list-style: none;
 }
 
-.gallery-image {
-  margin-bottom: 30px;
-}
-
 .gallery-images img {
   display: block;
+  width: 100%;
+  max-width: 170px;
+  height: auto;
 }
 
 .gallery-images a {
@@ -307,7 +360,8 @@ a.active::before {
 /* news */
 
 .news {
-  width: 770px;
+  width: 100%;
+  max-width: 770px;
   margin: 0 auto;
   margin-bottom: 120px;
 }
@@ -337,6 +391,9 @@ a.active::before {
 .regats-winner img {
   display: block;
   margin-bottom: 17px;
+  width: 100%;
+  max-width: 770px;
+  height: auto;
 }
 
 .regats-winner figcaption {
@@ -429,13 +486,22 @@ blockquote {
 .contacts {
   margin: 0;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
-  flex-direction: row-reverse;
+  /* flex-direction: row-reverse; */
 }
 
 .contacts-content {
-  width: 400px;
+  width: 100%;
+  max-width: 400px;
+  min-width: 240px;
   margin-top: 50px;
+}
+
+.contacts-map {
+  width: 100%;
+  max-width: 670px;
+  height: auto;
 }
 
 .contacts h2 {
@@ -537,7 +603,9 @@ ins {
 }
 
 .footer-wrapper {
-  width: 1170px;
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 1280px;
   margin: 0 auto;
   padding: 0 55px;
   display: flex;
@@ -546,6 +614,7 @@ ins {
 
 .footer-policy {
   width: 175px;
+  margin-right: 20px;
 }
 
 .footer-policy a:hover {
@@ -573,7 +642,8 @@ ins {
 }
 
 .footer-navigation-topics {
-  width: 870px;
+  width: 100%;
+  max-width: 870px;
   display: flex;
   justify-content: space-between;
   margin: 0;
@@ -591,10 +661,14 @@ ins {
   margin: 0;
   padding: 0;
   list-style: none;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  height: 128px;
+}
+
+.footer-topic-item {
+  margin-bottom: 12px;
+}
+
+.footer-topic-item:last-child {
+  margin-bottom: 0;
 }
 
 .footer-topic-item a:hover {
