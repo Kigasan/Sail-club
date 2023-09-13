@@ -273,7 +273,7 @@
   }
 
   .offer-content.active .offer-text {
-    white-space: wrap;
+    white-space: normal;
     overflow: visible;
     text-overflow: clip;
   }
